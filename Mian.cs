@@ -1,5 +1,5 @@
-public void CheckNetwork() {
-    if (Application.internetReachability == NetworkReachability.NotReachable) {
-        // Kích hoạt hiển thị UI báo lỗi Wi-Fi
+public class GameController {
+    public void RegisterUser(string username) {
+        // Xử lý lưu user vào database
     }
 }
