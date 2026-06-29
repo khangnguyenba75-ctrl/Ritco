@@ -1,8 +1,7 @@
+// Kiểm tra khi vừa tải trang
 window.onload = () => {
     if (localStorage.getItem('ritco_user')) {
         showLayer('dashboard-layer');
-    } else {
-        showLayer('login-layer');
     }
 };
 
@@ -11,10 +10,24 @@ function showLayer(id) {
     document.getElementById(id).style.display = 'block';
 }
 
-function showCreateName() { showLayer('create-name-layer'); }
+function loginWithEmail() {
+    const email = document.getElementById('email-input').value;
+    if(email) {
+        showLayer('create-name-layer');
+    } else {
+        alert("Bạn phải nhập Email!");
+    }
+}
 
 function finishSetup() {
     const name = document.getElementById('username').value;
-    localStorage.setItem('ritco_user', name);
-    showLayer('dashboard-layer');
+    if(name) {
+        localStorage.setItem('ritco_user', name);
+        showLayer('dashboard-layer');
+    }
+}
+
+function logout() {
+    localStorage.removeItem('ritco_user');
+    location.reload();
 }
