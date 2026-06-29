@@ -1,0 +1,5 @@
+app_name: "Ritco"
+offline_policy:
+  force_stop_game: true
+  show_reconnect_button: true
+  
