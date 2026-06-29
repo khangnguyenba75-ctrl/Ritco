@@ -1,3 +1,4 @@
-.page { display: none; }
-body { font-family: Arial, sans-serif; text-align: center; }
-#game-list { border: 1px solid #ccc; padding: 10px; margin-top: 20px; }
+.page { display: none; padding: 20px; }
+#login-layer { display: block; } /* Hiện trang đầu tiên */
+input { display: block; margin: 10px auto; padding: 8px; }
+button { padding: 10px 20px; cursor: pointer; }
