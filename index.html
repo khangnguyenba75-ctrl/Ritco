@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="wifi-error" class="overlay" style="display: none;">
-        <div class="box">
-            <h1>ERROR</h1>
-            <p>Wi-fi Has Been Off.</p>
-            <button onclick="openWifiSettings()">Open Settings Wi-fi</button>
-        </div>
+    <!-- Lớp Đăng nhập -->
+    <div id="login-layer" class="page">
+        <h1>Ritco</h1>
+        <button onclick="login('Google')">Google</button>
+        <button onclick="login('Apple')">Apple</button>
+        <button onclick="login('Phone')">Số điện thoại</button>
+        <button onclick="showCreateName()">Sign in</button>
     </div>
-    
-    <div id="app">Nội dung ứng dụng Ritco...</div>
+
+    <!-- Lớp Tạo Tên -->
+    <div id="create-name-layer" class="page" style="display:none;">
+        <input type="text" id="username" placeholder="Tên:">
+        <button onclick="finishSetup()">Sign in</button>
+    </div>
+
+    <!-- Lớp Dashboard -->
+    <div id="dashboard-layer" class="page" style="display:none;">
+        <h2>Ritco</h2>
+        <button onclick="location.href='editor.html'">Make Game</button>
+        <div id="notification">Kết bạn mới vui</div>
+        <div id="game-list"></div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
