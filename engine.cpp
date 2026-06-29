@@ -1,8 +1,5 @@
 #include <iostream>
-bool isWifiConnected = true;
-
-void checkConnection() {
-    if (!isWifiConnected) {
-        std::cout << "ERROR: Wi-fi Has Been Off." << std::endl;
-    }
+// Logic xử lý va chạm và đếm người chơi
+extern "C" {
+    int get_player_count() { return 0; }
 }
